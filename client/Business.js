@@ -18,3 +18,12 @@ if (Meteor.isServer) {
   });
 }
 
+Template.hello.events({
+    'change #attachment': function(evt){
+        console.log(evt.files);
+    }
+});
+
+Meteor.startup( function() {
+    filepicker.setKey("AeiqhaoDUTtyzaAvt33z6z");
+});
